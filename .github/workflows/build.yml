@@ -18,6 +18,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Extract app folder
+        run: |
+          unzip -o app.zip -d .
+          ls -la app
+
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
